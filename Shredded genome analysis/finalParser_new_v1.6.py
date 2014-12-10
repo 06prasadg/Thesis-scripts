@@ -1,67 +1,6 @@
 """
 Written by Prasad Gajare, Center for Bioinformatics and Computational Biology, Delaware Biotechnology Institute, University of Delaware.
 Please report bugs at prasadg@udel.edu
-
-"""
-"""
-
-THIS SCRIPT IS MODIFIED VERSION OF FINAL PARSER V1.
-IT FIGURES OUT CASES WHERE ANNOTATION IS 5-300, TOOL IS 3-300, 4-300, 6-300, 7-300
-AND VICE VERSA.
-ADDING THESE TO EXTRAS DICTIONARY AND WRITING TO TWO SEPERATE FILES
-RESULT FILE WILL BE UNCHANGED
-EXTRAS FILES WONT HAVE THESE CASES INCLUDED
-SPLITTING EXTRAS FILE INTO TWO- ONE FOR JUST EXTRA AND ONE FOR MISMATCH
-
-Adding modifications to eliminate repetitions in no condition.
-For a read, if a set of co-ordinates matches in one of the conditions, it shouldn't be repeated again.
-Also adding changes to include all in main.
-
-8/9/2014
-added changes to make sure all nos. of tool match up.
-Added another method at last which compares total matched dict with background dict and filters out mismatch and no condition ones
-Right now they are together. The counts are just being printed.
-Still need to do modifications to print them to seperate files.
-
-8/10/2014
-Adding changes to find the coords of annotation file which have read name matching with tool readnames but
-read not predicting them. By normal count of in annotation but not in tool function, we missing them out.
-So now we make two more dicts, one dict full will keep track of all read+coords of annot which match initially.
-Another will keep track of coords which actually matched in the calculations func
-getting the diff will gives us the annot ones which didn't match.
-Writing the not matched of annotations and  not matched of tool two seperate files
-
-8/18/2014
-Consider the case where SAM prediction is 3 - 200 for a read and tool prediction for the same reads are two
-say 3 - 99, 120-200 (now this is exact match when we consider the two coords together).
-Similarly we can have for partial matched cases like for eg SAM prediction is 3 -200
-and tool is 6 -99, 120-200 OR 3 - 98, 120-197, etc.
-Now we need to consider both reads in such cases and give a combined result for them. Individually they would fall in
-no condition or mismatch but when considered together they satisfy one of the cases.
-
-9/3/2014
-Combining split cases script and final parser script
-
-9/4/2014
-Made changes to subtract co-ords which are in split cases from no condition mismatch.
-Kept a background dictionary for tool and annotation co-ords to keep track of coords which found a match.
-
-Also made correction for 3' match 5'!diff and 5' match 3'! diff match cases.
-When the flags are false we get opposite values so there was error. Changed that.
-
-9/5/2014
-Corrected script to include ordering of co-ordinates in split cases too, means first coord of tool < second of tool coord, check if annotation has same ordering or mismatch
-Flags keeping track of the order and printing the correct order in results.
-Made changes to have correct sorting, all strings in arrays were converted to integers. (Due to string, the sorting was going wrong)
-Even with 22 problem, since it was comparing string and int, the output was wrong. Fixed it.
-
-9/15/2014
-Correcting script to eliminate co-ords occuring in split cases, which are again getting printed in no condition/mismatch.
-The background dictionary was stroing it wrong in case of flag true case. Everything was getting stored as larger first then smaller
-Corrected flag true cases to store smaller first then larger
-
-9/16/2014
-Corrected the 3 match / 5 match -1 cases, had done -2 instead of -1
 """
 
 import re
