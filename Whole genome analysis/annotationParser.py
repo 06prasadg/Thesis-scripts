@@ -1,4 +1,8 @@
-# This file convert sequence.txt downloaded from ncbi to >sequence_identifier|protein_id|_startCodon_stopCodon
+"""
+Written by Prasad Gajare, Center for Bioinformatics and Computational Biology, Delaware Biotechnology Institute, University of Delaware.
+Please report bugs at prasadg@udel.edu
+This script converts whole genome annotation predictions to a common standard format
+"""
 
 from sys import argv
 file1 = argv[1]
