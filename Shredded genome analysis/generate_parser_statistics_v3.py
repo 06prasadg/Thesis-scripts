@@ -1,11 +1,7 @@
 """
 Written by Prasad Gajare, Center for Bioinformatics and Computational Biology, Delaware Biotechnology Institute, University of Delaware.
 Please report bugs at prasadg@udel.edu
-Script to generate statistics from all results
-
-9/23/2014
-making changes to not print other not imp statistics.
-adding split case count
+Script to generate statistics from the comparison results
 """
 
 from sys import argv
