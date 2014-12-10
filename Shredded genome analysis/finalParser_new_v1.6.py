@@ -1,6 +1,7 @@
 """
 Written by Prasad Gajare, Center for Bioinformatics and Computational Biology, Delaware Biotechnology Institute, University of Delaware.
 Please report bugs at prasadg@udel.edu
+Main script to compare annotation file and ORF caller file predictions
 """
 
 import re
