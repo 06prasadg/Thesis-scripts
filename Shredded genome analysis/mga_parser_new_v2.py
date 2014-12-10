@@ -1,19 +1,13 @@
+"""
+Written by Prasad Gajare, Center for Bioinformatics and Computational Biology, Delaware Biotechnology Institute, University of Delaware.
+Please report bugs at prasadg@udel.edu
+Script to parse the ORF caller - MGA's results
+"""
+
 from sys import argv
 import re
 import argparse
 import os.path
-
-
-"""
-Modified on 8/6/2014
-This script has correction to invert co-ordinates if there is a - sign.
-It wasn't considered earlier.
-This is the latest MGA shredded parser script.
-
-9/16/2014
-Commented out indicator related logic (-2, -1)
-Exact matched results increased a lot.
-"""
 
 class mga_parser(object):
     
