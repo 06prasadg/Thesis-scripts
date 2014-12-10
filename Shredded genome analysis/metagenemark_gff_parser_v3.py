@@ -1,12 +1,7 @@
 """
-Modified on 8/17/2014
-Making modifications to match with Output mapped.
-These sequences are same but the way of representing co-ordinates of Ouptut mapped n MGM tool is different.
-So making changes to accommodate these diff naming conventions.
-
-9/16/2014
-Made changes to match tool output more
-from Prasad's observations
+Written by Prasad Gajare, Center for Bioinformatics and Computational Biology, Delaware Biotechnology Institute, University of Delaware.
+Please report bugs at prasadg@udel.edu
+Script to parse ORF caller - MGM results
 """
 
 from sys import argv
