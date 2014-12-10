@@ -1,3 +1,10 @@
+"""
+Written by Prasad Gajare, Center for Bioinformatics and Computational Biology, Delaware Biotechnology Institute, University of Delaware.
+Please report bugs at prasadg@udel.edu
+Generates two separate files with reads below and above a certain ORF length cutoff
+Also provides the count for each category
+"""
+
 from sys import argv
 import argparse
 import os.path
