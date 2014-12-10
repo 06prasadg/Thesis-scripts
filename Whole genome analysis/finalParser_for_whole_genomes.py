@@ -1,7 +1,7 @@
 """
 Written by Prasad Gajare, Center for Bioinformatics and Computational Biology, Delaware Biotechnology Institute, University of Delaware.
 Please report bugs at prasadg@udel.edu
-
+Script to do comparison between annotation and ORF caller predictions for whole genomes
 """
 
 
