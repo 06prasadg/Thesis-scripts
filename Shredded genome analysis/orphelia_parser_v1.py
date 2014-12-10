@@ -1,3 +1,9 @@
+"""
+Written by Prasad Gajare, Center for Bioinformatics and Computational Biology, Delaware Biotechnology Institute, University of Delaware.
+Please report bugs at prasadg@udel.edu
+Script to parse ORF caller - Orphelia's results
+"""
+
 import re
 import argparse
 import os.path
