@@ -1,3 +1,9 @@
+"""
+Written by Prasad Gajare, Center for Bioinformatics and Computational Biology, Delaware Biotechnology Institute, University of Delaware.
+Please report bugs at prasadg@udel.edu
+Script to generate a scatter plot using ORF lengths and ORF caller scores for MGA
+"""
+
 from sys import argv
 import argparse
 import os.path
