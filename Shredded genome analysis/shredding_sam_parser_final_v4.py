@@ -1,25 +1,12 @@
-#!/usr/bin/python
+"""
+Written by Prasad Gajare, Center for Bioinformatics and Computational Biology, Delaware Biotechnology Institute, University of Delaware.
+Please report bugs at prasadg@udel.edu
+Script to parse the annotation file predictions and put them in a standard common format
+"""
 
 import re
 from sys import argv
 from datetime import datetime
-
-"""
-This is the shredded script final version
-used to generate Output_mapped_sam.tab
-With all the corrections
-
-9/8/2014
-Adding main corrections to change output when reverse strand is there (16).
-Major modification
-
-9/12/2014, 9/14/2014
-Adding modifications for all the cases.
-Main 4 cases, as discussed in Prof's email
-
-9/16/2014
-Made correction in case 3, on line 199 (Added +1)
-"""
 
 class shredding_parser(object):
     
