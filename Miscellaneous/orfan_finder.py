@@ -47,5 +47,11 @@ def ORFan_finder():
 		else:
 			print fasta_dict[k]
 
-ORFan_finder()
+def main():
+    ORFan_finder()
+    
+if __name__ == '__main__':
+	main()
+
+
 
